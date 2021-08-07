@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalo — Time Tracking for Barok</title>
+
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      :root {
+        --clr-primary: #8888ae;
+        --clr-secondary: #f5f5f5;
+        --clr-third: #9cb2bd;
+        --clr-fourth: #f3e3f0;
+      }
+
+      main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 100vh;
+      }
+
+      .content {
+        /* padding: 6px 12px; */
+      }
+
+      .tasks {
+        background: var(--clr-primary);
+      }
+
+      .journal {
+        background: var(--clr-secondary);
+      }
+
+      .logodoro {
+        display: grid;
+        grid-template-rows: 50% 50%;
+      }
+
+      .logs {
+        background: var(--clr-third);
+      }
+
+      .pomodoro {
+        background: var(--clr-fourth);
+      }
+
+      h3 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: normal;
+        padding: 10px 20px 10px 10px;
+        border-radius: 0 0 30px 0;
+        background: inherit;
+        color: white;
+        display: inline-block;
+
+        box-shadow: 2px 2px 20px rgba(33, 33, 33, 0.5);
+      }
+
+      .content:nth-child(2) h3{
+        color: var(--clr-primary) !important;
+      }
+
+      .floating-label {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+
+        width: 7%;
+      }
+    </style>
+  </head>
+  <body>
+    <img class="floating-label" src="./assets/images/quick_logo.svg" alt="" />
+    <main>
+      <div class="tasks content">
+        <h3>Tasks</h3>
+      </div>
+      <div class="journal content">
+        <h3>Motivation</h3>
+      </div>
+      <div class="logodoro">
+        <div class="logs content">
+          <h3>Logs</h3>
+        </div>
+        <div class="pomodoro content">
+          <h3>Pomodoro</h3>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
